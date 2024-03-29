@@ -553,6 +553,7 @@ const Orderhistory = ({navigation}) => {
                         //color: 'white',
                         color: colorScheme === 'dark' ? 'gray' : 'gray',
                         fontWeight: 'bold',
+                        textTransform: "uppercase"
                       }}>
                       gst(5%)
                     </Text>

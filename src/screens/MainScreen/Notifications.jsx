@@ -167,26 +167,8 @@ const Notifications = ({navigation}) => {
                 borderBottomWidth: 0.5,
                 marginBottom: 10,
               }}>
-              <View
-                style={{
-                  height: 30,
-                  width: 30,
-                  backgroundColor: '#fed920',
-                  // padding: 10,
-                  borderRadius: 10,
-                  marginRight: 10,
-                  marginTop: 5,
-                }}>
-                <Text
-                  style={{
-                    fontSize: 15,
-                    fontWeight: 'bold',
-                    color: 'green',
-                    textAlign: 'center',
-                    marginTop: 5,
-                  }}>
-                  NF
-                </Text>
+              <View style={{ marginTop: 6, marginRight: 6 }}>
+                <Image source={require("../../assets/iconsassets/Icon.jpg")} style={{ width: 50, height: 50, resizeMode: "contain" }} />
               </View>
               <View style={{flex: 1}}>
                 <Text

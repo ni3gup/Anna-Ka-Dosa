@@ -132,7 +132,8 @@ const Profile = ({navigation}) => {
       }
 
       const id = await getData('id');
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
       if (!emailRegex.test(email)) {
         setLoad(false);
