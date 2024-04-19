@@ -109,6 +109,53 @@ const Verify = ({navigation, route}) => {
       // Handle API error if needed
     }
   };
+
+  const handleResendCode = async () => {
+    setload(true)
+
+    try {
+      const id = await getData('uid');
+      
+      const requestBody = {
+        user_id: id
+      };
+      
+      console.log(requestBody);
+
+      const response = await axios.post(
+        'https://newannakadosa.com/api/resend_otp',
+        requestBody,
+      );
+
+      console.log('https://newannakadosa.com/api/resend_ot')
+
+      if (response.data.status === 'danger') {
+        Snackbar.show({
+          text: 'Oops! Something went wrong',
+          textColor: 'white',
+          backgroundColor: 'red',
+          duration: Snackbar.LENGTH_SHORT,
+          marginBottom: 70, // Adjust this value to position the Snackbar at the desired distance from the top
+        });
+
+        console.log('response', response.data);
+        setload(false);
+      } else {
+        console.log('response', response.data);
+        Snackbar.show({
+          text: response.data.message,
+          textColor: 'white',
+          backgroundColor: 'green',
+          duration: Snackbar.LENGTH_SHORT,
+          marginBottom: 70, // Adjust this value to position the Snackbar at the desired distance from the top
+        });
+        setload(false);
+      }
+    } catch (error) {
+      
+    }
+  }
+
   if (load) {
     return <Loading />;
   }
@@ -289,7 +336,7 @@ const Verify = ({navigation, route}) => {
               }}>
               Didn't you recieve any code ?
             </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleResendCode}>
               <Text
                 style={{
                   textAlign: 'center',
