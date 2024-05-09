@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "770020949013",
-    "project_id": "newannakadosanotif",
-    "storage_bucket": "newannakadosanotif.appspot.com"
+    "project_number": "681082069445",
+    "project_id": "annakadosa-5ba6c",
+    "storage_bucket": "annakadosa-5ba6c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:770020949013:android:2c2dfa47184dea1928621c",
+        "mobilesdk_app_id": "1:681082069445:android:ee1463fd4e7e46d924ebac",
         "android_client_info": {
-          "package_name": "com.anna"
+          "package_name": "com.newanna"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC1khxXxdu2pOX7swjpqOQY8z3SXajMnxs"
+          "current_key": "AIzaSyBAL7mvY8j3EbAhyUdTF3l1T3-9gp2Z8QA"
         }
       ],
       "services": {
